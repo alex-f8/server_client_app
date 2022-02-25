@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ClientApp</string>
+    <string name="title_name">Server status:</string>
+    <string name="connection_status_on">Connected</string>
+    <string name="connection_status_off">Disconnected</string>
+    <string name="message" />
+    <string name="button">Send</string>
+    <string name="history" />
+
+</resources>

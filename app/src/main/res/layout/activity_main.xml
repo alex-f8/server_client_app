@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/title_name"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/connectionStatus"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/connection_status_off"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+
+    <EditText
+        android:id="@+id/messageBox"
+        android:layout_width="270dp"
+        android:layout_height="110dp"
+        android:layout_margin="30dp"
+        android:background="@color/background"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="type message..."
+        android:inputType="textMultiLine"
+        android:padding="5dp"
+        android:singleLine="false"
+        android:text="@string/message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:onClick="sendMessage"
+        android:text="@string/button"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/messageBox" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="270dp"
+        android:layout_height="350dp"
+        android:layout_margin="20dp"
+        android:background="@color/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connectionStatus">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical" />
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
